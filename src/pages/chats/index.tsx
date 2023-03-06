@@ -75,7 +75,7 @@ export default function ChatPage() {
             </Box>
 
             <Link href={`/chats/${chat.id}`}>
-              <Button variant="light" color="orange" fullWidth radius="md">
+              <Button variant="light" color="blue" fullWidth radius="md">
                 Chat
               </Button>
             </Link>

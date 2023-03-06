@@ -36,7 +36,7 @@ function MenuItem({ icon, text, path }: MenuItemProps) {
       <Button
         leftIcon={icon}
         variant="subtle"
-        color={pathname.startsWith(path) ? "cyan" : "primary"}
+        color={pathname.startsWith(path) ? "blue" : "primary"}
       >
         {text}
       </Button>
@@ -47,7 +47,6 @@ function MenuItem({ icon, text, path }: MenuItemProps) {
 function Menu() {
   return (
     <Stack spacing="xs" align="stretch">
-      <MenuItem path="/settings" text="Settings" icon={<IconSettings />} />
       <MenuItem path="/chats" text="Chats" icon={<IconMessageCircle />} />
       <MenuItem path="/templates" text="Templates" icon={<IconTemplate />} />
     </Stack>
@@ -95,17 +94,20 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
         <Group w="100%" h="100%">
           <Link href="/">
             <Group pl={32} align="center" w="max-content">
-              <Box h={50} sx={{ aspectRatio: "1" }} pos="relative">
+              <Box h={50} w={140} sx={{ aspectRatio: "1" }} pos="relative">
                 <Image
-                  src="/logo.png"
+                  src="/voiceflow.svg"
                   alt="logo"
                   fill
-                  style={{ objectFit: "contain" }}
+                  style={{
+                    objectFit: "contain",
+                    filter: `invert(${dark ? "1" : "0"}) sepia(0) saturate(1) hue-rotate(0deg) brightness(1) contrast(1)`,
+                  }}
                 />
               </Box>
 
-              <Text color="orange" weight="bold" size="2em">
-                AI Chat
+              <Text color={dark ? "white" : "blue"} weight="bold" size="2em">
+                Chat GPT
               </Text>
             </Group>
           </Link>
@@ -114,7 +116,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
             variant="filled"
             ml="auto"
             mr={64}
-            color={dark ? "orange" : "orange"}
+            color={dark ? "blue" : "blue"}
             onClick={() => toggleColorScheme()}
             title="Toggle color scheme"
           >

@@ -128,8 +128,8 @@ export function Chat() {
             height: "calc(100vh - 70px)",
             backgroundColor:
               theme.colorScheme === "dark"
-                ? theme.fn.darken(theme.colors.orange[0], 0.85)
-                : theme.colors.orange[0],
+                ? theme.fn.darken(theme.colors.blue[0], 0.85)
+                : `rgba(${theme.colors.blue[0]}, 0.4)`,
           })}
         >
           <CurrentChat />

@@ -47,7 +47,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           }),
           fontFamily: mainFont.style.fontFamily,
 
-          primaryColor: "orange",
+          primaryColor: "blue",
 
           /** Put your mantine theme override here */
           colorScheme,
