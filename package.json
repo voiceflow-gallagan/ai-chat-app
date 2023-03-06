@@ -1,5 +1,5 @@
 {
-  "name": "chat-app",
+  "name": "chat-gpt",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "dev": "next dev",
     "postinstall": "prisma generate",
     "lint": "next lint",
-    "start": "next start"
+    "start": "pm2 restart ecosystem.config.cjs --exp-backoff-restart-delay=100 --log pm2log --env production"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
