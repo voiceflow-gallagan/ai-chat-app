@@ -1,4 +1,5 @@
 import { type NextPage } from "next";
+import Script from 'next/script'
 
 import { api } from "@/utils/api";
 import {
